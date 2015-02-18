@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="bundles/angular-material/angular-material.css">
+</head>
+<body ng-app="MainApp">
+
+<!-- BUNDLES -->
+<script src="bundles/angular/angular.js"></script>
+<script src="bundles/angular-aria/angular-aria.js"></script>
+<script src="bundles/angular-animate/angular-animate.js"></script>
+<script src="bundles/angular-material/angular-material.js"></script>
+<script src="bundles/angular-ui-router/angular-ui-router.min.js"></script>
+
+
+<ui-view>
+    
+</ui-view>
+
+<!-- CONTROLLERS -->
+<script type="text/javascript">
+    angular.module('Administration.Controllers',[]);
+    angular.module('Security.Controllers',[]);
+</script>
+<script src="app/administration/controllers/LayoutController.js"></script>
+<script src="app/administration/controllers/HomeController.js"></script>
+
+<script src="app/security/controllers/LoginController.js"></script>
+
+<script src="app/app.js"></script>
+
+</body>
+</html>
