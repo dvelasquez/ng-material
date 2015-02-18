@@ -1,7 +1,8 @@
 angular.module('MainApp',[
     'Security.Controllers', 
     'Administration.Controllers', 
-    'ngMaterial', 
+    'Layout.Controllers',
+    'ngMaterial',
     'ui.router'
 ])
 
@@ -32,18 +33,18 @@ angular.module('MainApp',[
         controller: 'LoginController'
     })
 
-    .state('administration', {
-        templateUrl: 'app/administration/views/layout.html',
+    .state('layout', {
+        templateUrl: 'app/layout/views/layout.html',
         controller: 'LayoutController',
         abstract: true
     })
 
-    .state('administration.home', {
-        url: '/administration/home/:parametro1',
+    .state('layout.dashboard', {
+        url: '/dashboard/:parametro1',
         views: {
             content: {
-                templateUrl: 'app/administration/views/home.html',
-                controller: 'HomeController'
+                templateUrl: 'app/dashboard/views/index.html',
+                controller: 'DashboardController'
             }
         }
     })

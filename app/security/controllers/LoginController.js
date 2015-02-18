@@ -5,7 +5,7 @@ angular.module('Security.Controllers')
     $scope.name = 'Hola Mundo';
 
     $scope.next = function(){
-    	$state.go("administration.home", {
+    	$state.go("layout.dashboard", {
     		parametro1: "Hola Mundo desde Angular JS"
     	})
     }
