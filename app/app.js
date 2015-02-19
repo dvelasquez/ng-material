@@ -2,8 +2,11 @@ angular.module('MainApp',[
     'Security.Controllers', 
     'Administration.Controllers', 
     'Layout.Controllers',
+    'Dashboard.Controllers',
+    'Test.Controllers',
     'ngMaterial',
-    'ui.router'
+    'ui.router',
+    'restangular'
 ])
 
 
@@ -23,7 +26,9 @@ angular.module('MainApp',[
 
     $location.path('/security/login');
 })
-
+.config(function (RestangularProvider) {
+    RestangularProvider.setBaseUrl('http://api.openweathermap.org/data/2.5/');
+})
 .config(function($stateProvider,  $urlRouterProvider){
     $stateProvider
 
@@ -45,6 +50,15 @@ angular.module('MainApp',[
             content: {
                 templateUrl: 'app/dashboard/views/index.html',
                 controller: 'DashboardController'
+            }
+        }
+    })
+    .state('layout.test', {
+        url: '/test',
+        views: {
+            content: {
+                templateUrl: 'app/test/views/test.html',
+                controller: 'TestController'
             }
         }
     })

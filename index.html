@@ -12,6 +12,8 @@
 <script src="bundles/angular-animate/angular-animate.js"></script>
 <script src="bundles/angular-material/angular-material.js"></script>
 <script src="bundles/angular-ui-router/angular-ui-router.min.js"></script>
+<script src="bundles/lodash/lodash.min.js"></script>
+<script src="bundles/angular-restangular/restangular.js"></script>
 
 
 <ui-view>
@@ -20,16 +22,19 @@
 
 <!-- CONTROLLERS -->
 <script type="text/javascript">
+//    angular.module('Factory.Api',[]);
     angular.module('Administration.Controllers',[]);
     angular.module('Security.Controllers',[]);
     angular.module('Layout.Controllers',[]);
     angular.module('Dashboard.Controllers',[]);
+    angular.module('Test.Controllers',[]);
 </script>
+<!--<script src="sdk/factory/AbstractApiFactory.js"></script>-->
 <script src="app/layout/controllers/LayoutController.js"></script>
 <script src="app/administration/controllers/HomeController.js"></script>
 <script src="app/dashboard/controllers/DashboardController.js"></script>
 <script src="app/security/controllers/LoginController.js"></script>
-
+<script src="app/test/controllers/TestController.js"></script>
 <script src="app/app.js"></script>
 
 </body>

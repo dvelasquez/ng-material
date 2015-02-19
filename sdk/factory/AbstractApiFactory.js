@@ -3,9 +3,9 @@
  */
 'use strict';
 
-var app = angular.module('Factory.Api');
+var app = angular.module('MainApp');
 
-app.service('AbstractApiFactory', [
+app.factory('AbstractApiFactory', [
 
     function () {
     
