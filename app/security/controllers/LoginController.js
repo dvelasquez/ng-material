@@ -7,9 +7,9 @@ angular.module('Security.Controllers')
     $scope.next = function(){
     	$state.go("layout.dashboard", {
     		parametro1: "Hola Mundo desde Angular JS"
-    	});
+        });
     };
-    $scope.test = function(){
-        $state.go('layout.test');
-    };
+        $scope.test = function () {
+            $state.go('layout.test');
+        };
 });
